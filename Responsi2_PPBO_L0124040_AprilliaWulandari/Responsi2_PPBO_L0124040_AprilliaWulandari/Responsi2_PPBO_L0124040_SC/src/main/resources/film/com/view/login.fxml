@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+
+<!--root layout-->
+<StackPane xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="film.com.controller.LoginController" 
+           styleClass="login-bg"> <!--utk background-->
+    
+    <!--menghubungkan stylesheet CSS-->
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <!--utk menata elemen vertikal di tengah layar-->
+    <VBox alignment="CENTER" spacing="15">
+        <!--judul utama aplikasi-->
+        <Label text="✦ CINEMA DIARY ✦" textFill="WHITE">
+            <font>
+                <Font name="Georgia Bold" size="48"/>
+            </font>
+            <style>
+                -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+            </style>
+        </Label>
+
+        <!--tagline aplikasi-->
+        <Label text="Writing down every scene that touched your heart"
+               textFill="#FEFAE0">
+            <font>
+                <Font name="Georgia italic" size="16"/>
+            </font>
+            <style>
+                -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+            </style>
+        </Label>
+
+        <Region prefHeight="40"/>
+
+        <!--tombol utk masuk ke halaman utama-->
+        <Button text="Enter Journal"
+                onAction="#login"
+                styleClass="btn-start"
+                style="-fx-padding: 12 40; -fx-font-size: 15; -fx-cursor: hand;"/>
+    </VBox>
+</StackPane>

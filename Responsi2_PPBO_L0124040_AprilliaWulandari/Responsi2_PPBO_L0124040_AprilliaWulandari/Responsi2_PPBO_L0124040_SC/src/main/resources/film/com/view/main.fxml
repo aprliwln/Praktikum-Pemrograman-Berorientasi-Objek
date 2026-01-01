@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+
+<!--root layout utk menata elemen vertikal-->
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="film.com.controller.MainController"
+      spacing="20"
+      styleClass="main-bg"
+      style="-fx-padding: 40;">
+
+    <!--menghubungkan stylesheet CSS-->
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <!--judul aplikasi-->
+    <HBox alignment="CENTER">
+        <Label text="Cinephile Scribbles" textFill="#606C38">
+            <font>
+                <Font name="Georgia Bold" size="32"/>
+            </font>
+        </Label>
+    </HBox>
+
+    <!--kontainer uttama, horizontal-->
+    <HBox spacing="25" VBox.vgrow="ALWAYS">
+        
+        <!--bagian form utk menambahakan film-->
+        <VBox spacing="12" prefWidth="350" styleClass="card" style="-fx-padding: 25;">
+            <Label text="Write a Review" textFill="#A98467" 
+            style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+
+            <TextField fx:id="titleField" promptText="Title"/>
+            <ComboBox fx:id="typeBox" promptText="Select Type" maxWidth="Infinity"/>
+            <ComboBox fx:id="genreBox" promptText="Select Genre" maxWidth="Infinity"/>
+            <TextField fx:id="ratingField" promptText="Rating (e.g. 4.5)"/>
+            <TextArea fx:id="descArea" promptText="Short description" prefRowCount="3" wrapText="true"/>
+
+            <!--tombol add & delete-->
+            <HBox spacing="10">
+                <Button text="+ Add" onAction="#addCinema" styleClass="btn-primary" HBox.hgrow="ALWAYS" 
+                maxWidth="Infinity"/>
+                <Button text="Delete" onAction="#deleteCinema" style="-fx-background-color: #E3D5CA; 
+                -fx-text-fill: #A98467; -fx-background-radius: 15; -fx-font-weight: bold;"/>
+            </HBox>
+
+            <Separator style="-fx-padding: 5 0;"/>
+            
+            <!--search bar-->
+            <TextField fx:id="searchField" promptText="Search title..."/>
+
+            <!--tombol filter film-->
+            <HBox spacing="8" alignment="CENTER">
+                <Button text="All" onAction="#showAll" style="-fx-background-radius: 10;"/>
+                <Button text="Movie" onAction="#filterMovie" style="-fx-background-radius: 10;"/>
+                <Button text="Series" onAction="#filterSeries" style="-fx-background-radius: 10;"/>
+            </HBox>
+        </VBox>
+
+        <!--bagian tabel utk menampilkan film yg ditambahkan-->
+        <VBox spacing="15" HBox.hgrow="ALWAYS" styleClass="card" style="-fx-padding: 25;">
+
+            <!--header tabel dan tombol completed-->
+            <HBox alignment="CENTER_LEFT">
+                <Label text="My Watch Journey" textFill="#A98467" style="-fx-font-weight: bold; 
+                -fx-font-size: 18;" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Button text="Completed" onAction="#marked" styleClass="btn-primary"/>
+            </HBox>
+
+            <!--table view utk menampilkan dftr film-->
+            <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="titleCol" text="Title" prefWidth="180"/>
+                    <TableColumn fx:id="typeCol" text="Type" prefWidth="100"/>
+                    <TableColumn fx:id="genreCol" text="Genre" prefWidth="120"/>
+                    <TableColumn fx:id="ratingCol" text="Rating" prefWidth="70"/>
+                    <TableColumn fx:id="markedCol" text="Status" prefWidth="100"/>
+                    <TableColumn fx:id="descCol" text="Description" minWidth="200" prefWidth="300"/>
+                </columns>
+
+                <!--resize kolom-->
+                <columnResizePolicy>
+                    <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>

@@ -1,0 +1,161 @@
+/*global style*/
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-base: #F5EBE0;
+}
+
+/*backgrounds*/
+.login-bg {
+    -fx-background-color: linear-gradient(to bottom right, #D4A373, #A98467);
+}
+.main-bg {
+    -fx-background-color: #F5EBE0;
+}
+
+/*cards*/
+.card {
+    -fx-background-color: #FEFAE0;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(142, 151, 117, 0.2), 15, 0, 0, 5);
+}
+
+/*input fields*/
+.text-field, .combo-box, .text-area {
+    -fx-background-color: #FAEDCD;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-text-fill: #4A4A4A;
+}
+.text-field:focused {
+    -fx-border-color: #D4A373;
+    -fx-background-color: #ffffff;
+}
+
+/*buttons*/
+.btn-primary {
+    -fx-background-color: #8E9775;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.btn-primary:hover {
+    -fx-background-color: #7A8463;
+}
+
+.btn-start {
+    -fx-background-color: #FEFAE0;
+    -fx-text-fill: #A98467;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+}
+
+/*table*/
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-border-color: #E3D5CA;
+    -fx-border-radius: 15;
+    -fx-padding: 5;
+}
+
+/*judul tabel*/
+.table-view .column-header-background {
+    -fx-background-color: #E3D5CA;
+    -fx-background-radius: 15 15 0 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 40;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #606C38;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/*sel tabel*/
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 10;
+    -fx-text-fill: #4A4A4A;
+    -fx-font-size: 13px;
+}
+
+/*area sisa scroll bar*/
+.table-view .column-header-background .filler {
+    -fx-background-color: #E3D5CA;
+    -fx-background-radius: 0 15 0 0;
+}
+/*baris tabel*/
+.table-row-cell {
+    -fx-background-color: #FEFAE0;
+    -fx-border-color: #F5EBE0;
+    -fx-border-width: 0 0 1 0;
+}
+/*baris ganjil berbeda warna*/
+.table-row-cell:odd {
+    -fx-background-color: #FAEDCD;
+}
+/*baris yg dipilih*/
+.table-row-cell:selected {
+    -fx-background-color: #D4A373;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+/*hapus garis vertikal*/
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+/*scroll bar*/
+.table-view .scroll-bar:horizontal,
+.table-view .scroll-bar:vertical {
+    -fx-background-color: transparent; 
+    -fx-padding: 2;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #A98467;
+    -fx-background-radius: 10;
+    -fx-opacity: 0.5;
+}
+
+.table-view .scroll-bar .thumb:hover {
+    -fx-opacity: 1.0; 
+    -fx-background-color: #8E9775;
+}
+/*tombol <> di scroll bar*/
+.table-view .scroll-bar .increment-button, 
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-shape: "";
+}
+
+.table-view .scroll-bar .track {
+    -fx-background-color: #F5EBE0;
+    -fx-background-radius: 10;
+    -fx-border-color: #E3D5CA;
+    -fx-border-radius: 10;
+}
+
+/*kotak tooltip saat kursor diarahkan ke teks deskripsi*/
+.tooltip {
+    -fx-background-color: #FEFAE0; 
+    -fx-text-fill: #4A4A4A;        
+    -fx-border-color: #D4A373;     
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 13px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+    -fx-pref-width: 250;
+}
+
+/*wrap textnya jika panjang*/
+.tooltip > .label {
+    -fx-text-alignment: left;
+    -fx-wrap-text: true;
+}

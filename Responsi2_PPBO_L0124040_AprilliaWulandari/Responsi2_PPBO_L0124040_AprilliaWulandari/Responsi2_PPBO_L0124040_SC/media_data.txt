@@ -1,0 +1,14 @@
+Movie|Little Women|5.0|i like this movie so muchhhh|Family|true
+Series|Sheldon|4.5|He is so nerd....|Family|true
+Movie|interstellar|5.0|about blackhole|Sci-Fi|true
+Movie|The Little Rascal|5.0|you are so beautiful, for meeeee, can u seeee|Family|true
+Series|Anne With An E|4.5|carrot hair|Family|true
+Movie|Dead Poets Society|4.8|i dont like how neil's parents treat him|Family|true
+Movie|Evil Dead Rise|4.0|aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa takut bgttttttt|Horror|true
+Movie|Enola Holmes|5.0|how to be a dectective|Action|false
+Series|Gilmore Girls|4.2|omg this series|Family|false
+Movie|Pride and Prejudice|4.8|omg omg i like them|Romance|false
+Movie|Sherlock Holmes|5.0|enola's brother|Action|false
+Movie|The History of Everything|5.0|the main char is ateis|Sci-Fi|false
+Movie|The Medium|4.0|emmm begitu lah|Horror|false
+Movie|Harry Potter|5.0|i'm not a muggle:)|Fantasy|true

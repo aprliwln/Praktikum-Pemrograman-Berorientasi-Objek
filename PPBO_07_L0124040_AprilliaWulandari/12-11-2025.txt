@@ -1,0 +1,4 @@
+09:00|Laprak PBO|Mengerjakan input output enkapsulasi
+13:00|Laprak Metnum|Kerjaiin Sistem Persamaan Non Linear
+19:00|Laprak SO|Kerjaiin modul 10
+15:00|Project Basdat|kerjaiin laporannya
